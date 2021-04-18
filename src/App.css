@@ -1,38 +1,173 @@
-.App {
-  text-align: center;
+@keyframes hidden {
+    0% {
+        opacity: 1;
+        visibility: visible;
+      }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a:active, a:focus { outline: none; }
+
+input, textarea {outline:none;}
+input:active, textarea:active {outline:none;}
+:focus {outline:none;}
+textarea {resize:none;}
+textarea {resize:vertical;}
+textarea {resize:horizontal;}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.singin {
+    position: relative;
+}
+ 
+.singin_error {
+    position: absolute;
+    bottom: -35px;
+    left: 60px;
+    color: red;
+    padding: 5px;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    display: inline-block;
+    animation: hidden 2s ease-in-out forwards;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #bdbdbd;
+    height: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+    font-size: 22px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.singin {
+    display: flex;
+    justify-content: space-between;
+}
+
+.singin_input {
+    width: 150px;
+	font-size: 13px;
+	padding: 10px 0 10px 10px;
+	border: 1px solid #cecece;
+	background: #F6F6f6;
+	border-radius: 8px;
+    margin-right: 5px;
+}
+
+.singin_submit {
+    color: green;
+    background: none;
+    border: none;
+    border: 3px solid green;
+    font-weight: 600;
+    border-radius: 8px;
+    font-size: 17px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.welcome {
+    background-color: #bdbdbd;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 300px;
+    border-radius: 20px;
+    padding-left: 30px;
+}
+
+.welcome_title {
+    font-size: 45px;
+    margin: 0;
+    padding: 0;
+}
+
+.singout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.singout_hello {
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.singout_avatar img{
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.singout_button {
+    color: red;
+    background: none;
+    border: none;
+    border: 3px solid red;
+    font-weight: 600;
+    border-radius: 8px;
+    font-size: 17px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.news {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.news_item {
+    width: 450px;
+    border: 2px solid #bdbdbd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.news_item_img {
+    width: 100%;
+    height: auto;
+}
+
+.news_item_img img{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.news_item:nth-child(odd) {
+    margin-right: 200px;
+}
+
+.news_item_title {
+    text-transform: uppercase;
+    padding-left: 10px;
+}
+
+.news_item_content {
+    padding: 10px;
+
 }
